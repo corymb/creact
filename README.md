@@ -1,6 +1,6 @@
 # Creact
 
-Creact is designed to seamlessly integrate React with the [cuba](https://github.com/soveran/cuba), but is ultimately framework agnostic.
+Creact is designed to seamlessly integrate React with the [cuba](https://github.com/soveran/cuba) microframework, but is ultimately framework agnostic.
 ## Installation
 
 Add this line to your application's Gemfile:
