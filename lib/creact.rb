@@ -1,5 +1,12 @@
 require "creact/version"
 
 module Creact
-  # Your code goes here...
+  def self.create_dirs
+  end
+
+  def self.create_views
+  end
+
+  def self.run_generator
+  end
 end
