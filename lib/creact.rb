@@ -1,6 +1,6 @@
 require "creact/version"
 require "creact/file_handlers"
-
+require 'opal'
 
 module Creact
   def loader
