@@ -1,5 +1,2 @@
+<!-- div for React to mount -->
 <div id='content'></div>
-
-<div id="algorithm">
-  {{ insertion_sort }}
-</div>
