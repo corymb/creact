@@ -1,8 +1,6 @@
 require "creact/version"
 require "creact/file_handlers"
-# If you uncomment this, it'll break:
-# require 'opal'
-
+require 'opal'
 
 module Creact
   def loader
