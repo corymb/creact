@@ -6,7 +6,11 @@ require 'opal'
 
 module Creact
   def loader
-    puts 'Inside loader method.'
+    opal = Opal::Server.new {|s|
+      s.append_path 'js'
+      s.main = 'app'
+    }
+    puts opal
   end
   #   opal = Opal::Server.new {|s|
   #     s.append_path 'js'
