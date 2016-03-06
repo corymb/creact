@@ -11,6 +11,7 @@ module Creact
       s.main = 'app'
     }
     puts opal
+    Opal::Sprockets.load_asset('react', opal.sprockets)
   end
   #   opal = Opal::Server.new {|s|
   #     s.append_path 'js'
