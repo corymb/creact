@@ -33,4 +33,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'jquery'
   spec.add_dependency 'opal-jquery'
   spec.add_dependency 'nokogiri'
+  spec.add_dependency 'reactive-ruby'
 end

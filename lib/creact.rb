@@ -1,16 +1,15 @@
 require "creact/version"
 require "creact/file_handlers"
-# require 'jquery'
 require 'opal'
-# require 'opal-jquery'
+require 'opal-jquery'
+require 'reactive-ruby'
 
 module Creact
   def loader
     opal = Opal::Server.new {|s|
       s.append_path 'js'
-      s.main = 'app'
+      s.main = 'react'
     }
-    puts opal
-    Opal::Sprockets.load_asset('react', opal.sprockets)
+    Opal::Processor.load_asset_code(opal.sprockets, 'react')
   end
 end
