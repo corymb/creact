@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-    Don't. It's alpha!
+Don't. It's alpha!
 
 ## Development
 
