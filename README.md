@@ -22,6 +22,18 @@ Or install it yourself as:
 
 Don't. It's alpha!
 
+But if you really want to give it a try...
+
+First, generate the files Creact needs with: 
+    
+    Creact::FileOperations.run_generator
+
+(Coming soon: command line hook)
+
+Then navigate to your homepage. You should see 'Hello, World'.
+
+Congratulations - you just integrated React into your Cuba project!
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
