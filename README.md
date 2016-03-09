@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/disavowd/creact.svg?branch=master)](https://travis-ci.org/disavowd/creact)
+[![Dependency Status](https://gemnasium.com/disavowd/creact.svg)](https://gemnasium.com/disavowd/creact)
 # Creact
 
 Creact is designed to seamlessly integrate React with the [cuba](https://github.com/soveran/cuba) microframework, but is ultimately framework agnostic.
