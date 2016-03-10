@@ -28,9 +28,7 @@ But if you really want to give it a try...
 
 First, generate the files Creact needs with: 
     
-    Creact::FileOperations.run_generator
-
-(Coming soon: command line hook)
+    creact generate
 
 Then navigate to your homepage. You should see 'Hello, World'.
 
