@@ -1,3 +1,4 @@
+[![Gem Version](http://img.shields.io/gem/v/creact.svg)]
 [![Build Status](https://travis-ci.org/disavowd/creact.svg?branch=master)](https://travis-ci.org/disavowd/creact)
 [![Dependency Status](https://gemnasium.com/disavowd/creact.svg)](https://gemnasium.com/disavowd/creact)
 # Creact
