@@ -3,6 +3,7 @@ require "creact/file_handlers"
 require 'opal'
 require 'opal-jquery'
 require 'reactive-ruby'
+require 'creact/cli'
 
 module Creact
   def loader
