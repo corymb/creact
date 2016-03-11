@@ -7,14 +7,14 @@ module Creact
 
     `generate` will generate the following tree in your project:
 
-      ├── js
-      │   ├── jquery.js
-      │   └── react.rb
-      ├── views
-      │   ├── home.mote
-      │   └── layout.mote
+      ├── js\n
+      │   ├── jquery.js\n
+      │   └── react.rb\n
+      ├── views\n
+      │   ├── home.mote\n
+      │   └── layout.mote\n
 
-      This will integrate React into your project.
+      This will integrate React into your project.\n
 
     GENERATE
     # option :upcase
@@ -23,7 +23,6 @@ module Creact
       # greeting.upcase! if options[:upcase]
       # puts greeting
       Creact::FileOperations.run_generator
-
     end
   end
 end
