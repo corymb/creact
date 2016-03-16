@@ -22,13 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-Don't. It's alpha!
+First, generate the files Creact needs with:
 
-But if you really want to give it a try...
-
-First, generate the files Creact needs with: 
-    
     creact generate
+
+Ensure that you route 'home.mote' in your url config.
 
 Then navigate to your homepage. You should see 'Hello, World'.
 
