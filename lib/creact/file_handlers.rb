@@ -3,7 +3,6 @@ module Creact
     extend self
     def get_absolute_path(file)
       location = File.dirname(__FILE__)
-      puts "#{location}/files/#{file}"
       "#{location}/files/#{file}"
     end
 
@@ -28,11 +27,6 @@ module Creact
       @js_files = ['jquery.js', 'react.rb'].map { |file| get_absolute_path(file) }
       FileUtils.cp(@js_files, 'js')
     end
-
-  #   # def create_react_module
-  #   #   # TODO: Do I need this anymore?
-  #   #   FileUtils.cp(get_absolute_path('react_helpers.rb'), '.')
-  #   # end
 
     def creact_react_entry_point
       FileUtils.cp(get_absolute_path('react.rb'), 'js')
