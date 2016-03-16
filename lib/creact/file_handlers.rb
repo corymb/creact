@@ -32,6 +32,11 @@ module Creact
       FileUtils.cp(get_absolute_path('react.rb'), 'js')
     end
 
+    def delete_dirs
+      FileUtils.rm_rf 'views'
+      FileUtils.rm_rf 'js'
+    end
+
   #   def check_dir_empty(dir)
   #     (Dir.entries(dir) - %w{ . .. }).empty?
   #   end
