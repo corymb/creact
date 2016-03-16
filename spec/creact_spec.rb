@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pry-byebug'
 
 describe Creact do
   let(:creact_wrapper) { Class.new { include Creact } }
