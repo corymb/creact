@@ -3,6 +3,14 @@ require 'spec_helper'
 describe Creact do
   let(:creact_wrapper) { Class.new { include Creact } }
 
+  before :all do
+    Creact::FileOperations.run_generator
+  end
+
+  after :all do
+    Creact::FileOperations.delete_dirs
+  end
+
   it 'has a version number' do
     expect(Creact::VERSION).not_to be nil
   end
