@@ -18,4 +18,18 @@ describe Creact::FileOperations do
     expect(Dir.exists? 'views').to be true
   end
 
+  it 'creates home.mote' do
+    expect(File.exists? 'views/home.mote').to be false
+    Creact::FileOperations.create_dirs
+    Creact::FileOperations.create_views
+    expect(File.exists? 'views/home.mote').to be true
+  end
+
+  it 'creates layout.mote' do
+    expect(File.exists? 'views/layout.mote').to be false
+    Creact::FileOperations.create_dirs
+    Creact::FileOperations.create_views
+    expect(File.exists? 'views/layout.mote').to be true
+  end
+
 end
