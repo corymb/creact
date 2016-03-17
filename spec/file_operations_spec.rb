@@ -12,10 +12,10 @@ describe Creact::FileOperations do
     expect(Dir.exists? 'js').to be true
   end
 
-  it 'creates css directory' do
-    expect(Dir.exists? 'css').to be false
+  it 'creates views directory' do
+    expect(Dir.exists? 'views').to be false
     Creact::FileOperations.create_dirs
-    expect(Dir.exists? 'js').to be true
+    expect(Dir.exists? 'views').to be true
   end
 
 end
