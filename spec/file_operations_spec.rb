@@ -32,4 +32,10 @@ describe Creact::FileOperations do
     expect(File.exists? 'views/layout.mote').to be true
   end
 
+  it 'creates jquery.js' do
+    expect(File.exists? 'js/jquery.js').to be false
+    Creact::FileOperations.create_dirs
+    Creact::FileOperations.create_js
+    expect(File.exists? 'js/jquery.js').to be true
+  end
 end
