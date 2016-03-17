@@ -38,4 +38,12 @@ describe Creact::FileOperations do
     Creact::FileOperations.create_js
     expect(File.exists? 'js/jquery.js').to be true
   end
+
+  it 'creates react.rb' do
+    expect(File.exists? 'js/react.rb').to be false
+    Creact::FileOperations.create_dirs
+    Creact::FileOperations.create_js
+    expect(File.exists? 'js/react.rb').to be true
+  end
+
 end
