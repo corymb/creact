@@ -6,20 +6,18 @@ module Creact
       "#{location}/files/#{file}"
     end
 
-    def create_dirs
-      dirs = ['views', 'js']
+    def create_dirs(views='views', js='views')
+      dirs = [views, js]
       puts 'Creating the following dirs: ' + dirs.join(' ')
       FileUtils.makedirs dirs
     end
 
     def create_views(template=:mote)
+      # TODO: Add support for other template languages
       puts 'Creating view files...'
-      # TODO: Refactor into a case statement:
-      if template == :mote
-        @view_files = ['layout.mote', 'home.mote']
-      end
-      files = @view_files.map { |file| get_absolute_path(file) }
-      FileUtils.cp(files, 'views')
+      files = ['layout.mote', 'home.mote']
+      @view_files = files.map { |file| get_absolute_path(file) }
+      FileUtils.cp(@view_files, 'views')
     end
 
     def create_js(template=:mote)
@@ -28,59 +26,19 @@ module Creact
       FileUtils.cp(@js_files, 'js')
     end
 
-    def creact_react_entry_point
-      FileUtils.cp(get_absolute_path('react.rb'), 'js')
-    end
-
     def delete_dirs
       FileUtils.rm_rf 'views'
       FileUtils.rm_rf 'js'
     end
 
-  #   def check_dir_empty(dir)
-  #     (Dir.entries(dir) - %w{ . .. }).empty?
-  #   end
-  #
-  #   def delete_files
-  #     @js_files = ['js/jquery.js', 'js/react.rb']
-  #     @view_files = ['views/layout.mote', 'views/home.mote']
-  #     puts "Destructive operation: 'yes' to continue"
-  #     confirm = gets.strip
-  #
-  #     if confirm == 'yes'
-  #       puts 'Deleting...'
-  #       puts @view_files
-  #       FileUtils.rm @view_files
-  #       puts @js_files
-  #       FileUtils.rm @js_files
-  #       puts 'React entry point'
-  #       FileUtils.rm 'js/react.rb'
-  #       # puts 'React helper module'
-  #       # FileUtils.rm 'react_helpers.rb'
-  #
-  #       if check_dir_empty('views')
-  #         puts 'Deleting directory: views...'
-  #         FileUtils.rm_rf 'views'
-  #       end
-  #
-  #       if check_dir_empty('js')
-  #         puts 'Deleting directory: js...'
-  #         FileUtils.rm_rf 'js'
-  #         puts 'Done'
-  #       end
-  #     else
-  #       puts 'Aborted.'
-  #     end
-  #   end
-  #
     def run_generator
       puts 'Running generator'
-      # Dir.chdir Dir.pwd
       create_dirs
       create_views
+      @view_files.map { |file| puts file }
       create_js
-  #     create_react_module
-      creact_react_entry_point
+      @js_files.map { |file| puts file }
+      puts 'Done!'
     end
   end
 end
