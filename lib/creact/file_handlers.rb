@@ -6,10 +6,10 @@ module Creact
       "#{location}/files/#{file}"
     end
 
-    def create_dirs(views='views', js='views')
-      dirs = [views, js]
-      puts 'Creating the following dirs: ' + dirs.join(' ')
-      FileUtils.makedirs dirs
+    def create_dirs
+      @dirs = ['views', 'js']
+      puts 'Creating the following dirs: ' + @dirs.join(' ')
+      FileUtils.makedirs @dirs
     end
 
     def create_views(template=:mote)
@@ -32,6 +32,22 @@ module Creact
     end
 
     def run_generator
+      existing_files = []
+      files_to_create = [
+        'views/layout.mote',
+        'views/home.mote',
+        'js/react.rb',
+        'js/jquery.js'
+      ]
+      files_to_create.each do |file|
+        if File.exists? file
+          existing_files << file
+        end
+      end
+      if not existing_files.empty?
+        raise IOError, "Move or rename the following files to use this generator: #{existing_files}"
+      end
+
       puts 'Running generator'
       create_dirs
       create_views
